@@ -3,7 +3,7 @@ var ejs = require('ejs'); //embedded javascript template engine
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.send('Hello world!');
+  response.render('layout.html');
 });
 
 var port = process.env.PORT || 3000;
