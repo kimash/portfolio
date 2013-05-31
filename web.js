@@ -50,7 +50,12 @@ app.configure(function() {
 });
 
 app.get('/', function(request, response) {
-  response.send('Hello world!');
+	var templateData = {
+			layout: 'layout.html'
+		};
+		console.log(templateData);
+		
+	response.render('main.html',templateData);
 });
 
 var port = process.env.PORT || 3000;
