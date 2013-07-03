@@ -4,7 +4,7 @@ module.exports.configureSchema = function(Schema, mongoose) {
     //Screen media category
     var Screen = new Schema({
       title	: String
-    , year	: 
+    , year	: String
     , squareImg	: String
     , videoUrl	: String
     , description	: String
