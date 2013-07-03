@@ -2,6 +2,8 @@ var express = require('express');
 var ejs = require('ejs'); //embedded javascript template engine
 var app = express.createServer(express.logger());
 var mongoose = require('mongoose');
+var schema = mongoose.Schema; 
+var requestURL = require('request');
 
 /************ DATABASE CONFIGURATION **********/
 app.db = mongoose.connect(process.env.MONGOLAB_URI); //connect to mongolabs db - local server uses .env
