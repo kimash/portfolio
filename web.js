@@ -7,11 +7,11 @@ var mongoose = require('mongoose');
 app.db = mongoose.connect(process.env.MONGOLAB_URI); //connect to mongolabs db - local server uses .env
 
 // Include models.js - this file includes the database schema and defines the models used
-//require('./models').configureSchema(schema, mongoose);
+require('./models').configureSchema(schema, mongoose);
 
 // Define your DB Model variables
-//var SixWordIt = mongoose.model('SixWordIt');
-//var Captions = mongoose.model('Captions');
+var Screen = mongoose.model('Screen');
+var NotScreen = mongoose.model('NotScreen');
 /************* END DATABASE CONFIGURATION *********/
 
 /*********** SERVER CONFIGURATION *****************/
